@@ -36,7 +36,7 @@ document.getElementById("complimentButton").onclick = function () {
    let dogContainer = document.createElement("div")
    dogContainer.className = "dog-container"
    dogContainer.innerHTML = `<h2>Name:</h2> <p>${dog.name}</p>
-        <h2>Name:</h2> <p> ${dog.breed}</p>
+        <h2>Breed:</h2> <p> ${dog.breed}</p>
         <h2>Color:</h2> <p> ${dog.color}</p>
         <button id='edit-id-${dog.id}'>Edit</button>
         <button id='delete-id-${dog.id}'>Delete</button>`
@@ -57,7 +57,7 @@ document.getElementById("complimentButton").onclick = function () {
 
       const getDogs = () => {
         axios
-          .get("http://localhost:4000/api/dogs")
+          .get("http://localhost:4000/api/dogs/")
           .then(res => {
             handleDisplay(res.data)
           })
@@ -73,14 +73,14 @@ document.getElementById("complimentButton").onclick = function () {
           breed: document.getElementById(`new-breed`).value,  
           color: document.getElementById(`new-color`).value 
         }
-        axios.post(`http://localhost:4000/api/dog`, newDog)
+        axios.post(`http://localhost:4000/api/dog/`, newDog)
         .then(res => {
           handleDisplay(res.data)
         })
         .catch(err => console.log(err))
 
          document.getElementById("new-name").value = "",
-         document.getElementById("new-breed").value = "".  
+         document.getElementById("new-breed").value = "",  
          document.getElementById("new-color").value = ""
       }
 

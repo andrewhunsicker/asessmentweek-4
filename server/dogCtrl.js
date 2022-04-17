@@ -1,5 +1,6 @@
-let dogs = require('./dogs.json')
+ let dogs = require('./dogs.json')
 let globalId = dogs[dogs.length -1].id + 1
+
 
 module.exports = {
     getDogs: (req, res) => {
@@ -14,7 +15,7 @@ module.exports = {
             id: globalId
         }
         dogs.push(newDog)
-        res.stauts(200).send(dogs)
+        res.status(200).send(dogs)
         globalId++
     },
     updateDog: (req, res) => {
@@ -37,7 +38,9 @@ module.exports = {
         console.log(`delete`,dogs)
 
         res.status(200).send(dogs)
-    }
+    },
+
+
 
 
 }

@@ -4,20 +4,22 @@
     <title>Back End Assessment</title>
   </head>
   <body class="container">
+
     <button id="complimentButton">Get a compliment</button>
 
     <body class="container">
       <button id="fortuneButton">Get a fortune</button>
 
-      <form>
-        <p>please create a fortune here</p>
-        <input 
-          type="text"
-          id="fortuneask"
-          placeholder="new fortune here"
-        >
-          <button id="newFortuneButton">submit fortune</button>
+      <form id="add-form">
+        <input id="new-name" placeholder="Name" class="form-input"/>
+        <input id="new-breed" placeholder="breed" class="form-input"/>
+        <input id="new-color" placeholder="color" class="form-input"/>
+        <button>Add dog</button>
       </form>
+
+      <section id="dog-display"></section>
+      <section id="edit-zone"></section>
+
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

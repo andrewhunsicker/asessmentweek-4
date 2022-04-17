@@ -1,0 +1,14 @@
+[
+    {
+    "name": "max",
+    "breed": "lab",
+    "color": "golden",
+    "id": 1
+    },
+    {
+        "name": "binx",
+        "breed": "doberman",
+        "color": "black",
+        "id": 2
+    }
+]
